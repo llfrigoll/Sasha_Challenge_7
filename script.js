@@ -1,34 +1,42 @@
 // script.js
 
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
+//Created 3 Objects for the 3 orders containing the amount of each item ordered
+const root1El = document.querySelector("dl[data-key='order1']")
+const root1 = {
+    biscuits : root1El.getAttribute('data-biscuits'),
+    donuts : root1El.getAttribute('data-donuts'),
+    pancakes : root1El.getAttribute('data-pancakes'),
+    status : root1El.getAttribute('data-delivered')
+}
 
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
+const root2El = document.querySelector("dl[data-key='order2']")
+const root2 = {
+    biscuits : root2El.getAttribute('data-biscuits'),
+    donuts : root2El.getAttribute('data-donuts'),
+    pancakes : root2El.getAttribute('data-pancakes'),
+    status : root2El.getAttribute('data-delivered')
+}
 
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
+const root3El = document.querySelector("dl[data-key='order3']")
+const root3 = {
+    biscuits : root3El.getAttribute('data-biscuits'),
+    donuts : root3El.getAttribute('data-donuts'),
+    pancakes : root3El.getAttribute('data-pancakes'),
+    status : root3El.getAttribute('data-delivered')
+}
 
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
+//Grabbed each div containing the different items per order and set the text content to the values stored in the objects
+root1El.querySelector('.biscuits > .count').textContent = root1.biscuits;
+root1El.querySelector('.donuts > .count').textContent = root1.donuts;
+root1El.querySelector('.pancakes > .count').textContent = root1.pancakes;
+root1El.querySelector('.status > dd').textContent = root1.status === 'true' ? 'Delivered' : 'Pending';
 
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
+root2El.querySelector('.biscuits > .count').textContent = root2.biscuits;
+root2El.querySelector('.donuts > .count').textContent = root2.donuts;
+root2El.querySelector('.pancakes > .count').textContent = root2.pancakes;
+root2El.querySelector('.status > dd').textContent = root2.status === 'true' ? 'Delivered' : 'Pending';
 
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+root3El.querySelector('.biscuits > .count').textContent = root3.biscuits;
+root3El.querySelector('.donuts > .count').textContent = root3.donuts;
+root3El.querySelector('.pancakes > .count').textContent = root3.pancakes;
+root3El.querySelector('.status > dd').textContent = root3.status === 'true' ? 'Delivered' : 'Pending';
